@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23000000%22></rect><path fill=%22%237b7bf1%22 d=%22M15.57 19.79L27.03 42.94L38.40 19.79L47.32 19.79L31.59 49.75L47.66 80.21L38.65 80.21L27.03 56.64L15.36 80.21L6.36 80.21L22.50 49.75L6.69 19.79L15.57 19.79ZM93.64 50.12L93.64 72.70L92.31 74.36Q86.59 81.04 75.55 81.04L75.55 81.04Q65.75 81.04 60.17 74.55Q54.59 68.05 54.46 56.18L54.46 56.18L54.46 44.31Q54.46 31.61 59.55 25.28Q64.63 18.96 74.76 18.96L74.76 18.96Q83.39 18.96 88.27 23.77Q93.14 28.58 93.64 37.51L93.64 37.51L86.05 37.51Q85.59 31.86 82.91 28.69Q80.24 25.51 74.80 25.51L74.80 25.51Q68.28 25.51 65.25 29.77Q62.22 34.02 62.10 43.36L62.10 43.36L62.10 55.69Q62.10 64.82 65.58 69.69Q69.07 74.57 75.59 74.57L75.59 74.57Q81.73 74.57 84.93 71.58L84.93 71.58L86.05 70.54L86.05 56.60L75.01 56.60L75.01 50.12L93.64 50.12Z%22></path></svg>" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--favicon /ícono que puede ir al lado del título en la pestaña-->
+    <link rel="icon" type="image/x-icon" href="#">
+    <title>Xgestión - Programadores y Expertos en Sistemas de Gestión</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <!-- Otros enlaces CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header>
+            <div class="logo">
+                <span class="balance-icon"></span>
+                <h1>Xgestión</h1>
+            </div>
+
+            <nav>
+                <!-- Ícono de Menú -->
+                <button class="menu-toggle" onclick="toggleMenu()">
+                    <i class="bi bi-list"></i>
+                </button>
+                <ul id="nav-links">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li class="social">
+                        <a
+                            href="https://api.whatsapp.com/send/?phone=5491127393676&text=Hola%2C+Equigesti%C3%B3n%21+Quisiera+obtener+m%C3%A1s+informaci%C3%B3n+sobre+sus+planes+y+servicios.&type=phone_number&app_absent=0"><i
+                                class="fab fa-whatsapp" style="color: #25D366;"></i></a>
+                        <a href="https://www.instagram.com/xgestion/"><i class="fa-brands fa-instagram"
+                                style="color: #E4405F;"></i></a>
+                    </li>
+                </ul>
+            </nav>
+
+
+        </header>
+
+        <main>
+
+
+            <!-- SECCION S E R V I C I O S -->
+            <section id="servicios">
+                <h3 class="titulo-seccion">MIS SERVICIOS</h3>
+                <div class="fila">
+                    <div class="servicio">
+                        <span class="icono"> <i class="fa-solid fa-code"></i></span>
+                        <h4>Desarrollo Web Front-End</h4>
+                        <hr>
+                        <ul class="servicios-tag">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <p>Creación de interfaces visuales atractivas y responsivas que ofrecen una experiencia de
+                            usuario
+                            intuitiva y moderna. Utilizamos tecnologías como HTML, CSS y JavaScript para diseñar y
+                            desarrollar sitios web interactivos.
+                        </p>
+                    </div>
+                    <div class="servicio">
+                        <span class="icono"><i class="fa-solid fa-database"></i></span>
+
+                        <h4>Desarrollo Web Back-End</h4>
+                        <hr>
+                        <ul class="servicios-tag">
+                            <li>Node.js</li>
+                            <li>Python</li>
+                            <li>Bases de datos</li>
+                        </ul>
+                        <p>Implementación de la lógica del servidor y funcionalidades críticas utilizando tecnologías
+                            como
+                            Node.js o Python. Nos encargamos de manejar las interacciones con bases de datos, procesar
+                            solicitudes del usuario y asegurar la seguridad de la aplicación.</p>
+                    </div>
+                    <div class="servicio">
+                        <span class="icono"><i class="fa-solid fa-mobile-alt"></i></span>
+                        <h4>Desarrollo de Aplicaciones Web</h4>
+                        <hr>
+                        <ul class="servicios-tag">
+                            <li>Interacción</li>
+                            <li>Escalabilidad</li>
+                            <li>Responsive</li>
+                        </ul>
+                        <p>Creación de aplicaciones web robustas que van más allá de la simple página estática.
+                            Diseñamos y
+                            desarrollamos aplicaciones interactivas, escalables y adaptadas a las necesidades
+                            específicas de
+                            tu negocio.</p>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="servicio">
+                        <span class="icono"><i class="fa-solid fa-cloud"></i></span>
+                        <h4>Alojamiento de Sitios</h4>
+                        <hr>
+                        <ul class="servicios-tag">
+                            <li>Escalabilidad</li>
+                            <li>Gestión</li>
+                            <li>Seguridad</li>
+                        </ul>
+                        <p>Provisión y gestión de soluciones de alojamiento optimizadas para el rendimiento de tu sitio
+                            web.
+                            Ofrecemos opciones de escalabilidad, seguridad avanzada y soporte técnico para asegurar el
+                            mejor
+                            funcionamiento de tu sitio.</p>
+                    </div>
+                    <div class="servicio">
+                        <span class="icono"><i class="fa-solid fa-plug"></i></span>
+
+                        <h4> Integración de APIs y Servicios</h4>
+                        <hr>
+                        <ul class="servicios-tag">
+                            <li>Conexión</li>
+                            <li>Automatización</li>
+                            <li>Terceros</li>
+                        </ul>
+                        <p> Integramos tu aplicación con APIs y servicios externos para extender sus funcionalidades y
+                            automatizar procesos. Nos aseguramos de que todas las interacciones sean seguras y
+                            eficientes,
+                            mejorando la experiencia del usuario.</p>
+                    </div>
+                    <div class="servicio">
+                        <span class="icono"><i class="fa-solid fa-wrench"></i></span>
+                        <h4>Consultoría y Mejora de Sistemas Existentes</h4>
+                        <hr>
+                        <ul class="servicios-tag">
+                            <li>Optimización</li>
+                            <li>Rendimiento</li>
+                            <li>Mejoras</li>
+                        </ul>
+                        <p>Analizamos y optimizamos sitios y aplicaciones ya existentes. Proporcionamos recomendaciones
+                            para
+                            mejorar el rendimiento, la funcionalidad y la seguridad, asegurando que tu negocio esté
+                            siempre
+                            a la vanguardia.</p>
+                    </div>
+                </div>
+
+                <div class="boton-planes">
+                    <a href="#exposiciones" class="btn btn-primary">Quiero un plan</a>
+                </div>
+
+            </section>
+
+
+
+        </main>
+
+        <footer>
+            <p class="derechos-de-autor">Diseñado por Xgestión 2024 en colaboración de <a
+                    href="https://www.freepik.es/">freepik</a>&#169;</p>
+
+        </footer>
+    </div>
+
+
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>
