@@ -1,4 +1,5 @@
 /*general*/
+
 body,
 html {
     margin: 0;
@@ -6,7 +7,6 @@ html {
     height: 100%;
     box-sizing: border-box;
     background-color: #000;
-
     /* Fondo negro */
 }
 
@@ -17,6 +17,69 @@ html {
     background-color: #000;
     /* Fondo negro */
 }
+
+
+main {
+    padding: 2rem;
+    background-color: #000;
+    /* Fondo negro */
+}
+
+p {
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+form {
+    max-width: 400px;
+    margin: auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+
+
+/*footer*/
+
+
+footer {
+    background-color: #000;
+    /* Negro */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.derechos-de-autor {
+    font-size: 15px;
+}
+
+.iconos-redes i:hover {
+    transform: scale(1.2, 1.2);
+    /* 150% horizontal, 80% vertical */
+}
+
+
 
 /* Encabezado */
 header {
@@ -30,9 +93,6 @@ header {
     /* Asegura que los elementos se posicionen dentro del header */
 }
 
-.color-planes {
-    color: red;
-}
 
 /* Logo */
 .logo {
@@ -90,6 +150,7 @@ header {
 }
 
 
+
 /* Menu*/
 
 nav {
@@ -145,6 +206,7 @@ nav ul li a:hover {
     color: white;
 }
 
+/* Estilo botón de planes del menú */
 .bton {
     --color: lightblue;
     --color2: black;
@@ -203,27 +265,78 @@ nav ul li a:hover {
     transform: scale(.98);
 }
 
-main {
-    padding: 2rem;
-    background-color: #000;
-    /* Fondo negro */
+/* íconos de redes sociales en el menú del navbar */
+
+.social a {
+    display: inline-block;
+    background: linear-gradient(to right, rgba(238, 229, 229, 0.616), black, black, rgba(238, 229, 229, 0.616));
+    /* Gradiente de negro a gris */
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    border: 2px solid grey;
+    /* Borde gris */
+    margin: 4px;
+
 }
 
-p {
-    color: white;
-    font-size: 1.5rem;
+.social a:hover {
+    transform: scale(1.1);
+    /* Aumenta el tamaño 10% en ambos ejes */
+    box-shadow: 0 0 20px #87CEEB;
+    ;
 }
 
 
-footer {
-    background-color: #000;
-    /* Negro */
-    color: white;
-    text-align: center;
-    padding: 1rem;
+
+.social i {
+    font-size: 1.375rem;
+    font-weight: bold;
+
 }
 
-/* Parte ex carrousel inicio */
+
+
+/* estilo del anuncio de promociones luego del navbar */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #111;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+}
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+}
+
+.marquee span {
+    font-size: 1.1rem;
+    color: whitesmoke;
+    padding-left: 100%;
+    display: inline-block;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+
+
+/* carrousel inicio */
 
 .carousel-caption {
     position: absolute;
@@ -232,7 +345,7 @@ footer {
     transform: translate(-50%, -50%);
     text-align: center;
     color: #ffffff;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.5);
     /* Más opacidad para mejorar el contraste */
     padding: 20px;
     border-radius: 10px;
@@ -241,7 +354,11 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+
 }
+
+
 
 .carousel-caption h2 {
     font-size: 2rem;
@@ -273,6 +390,199 @@ footer {
 }
 
 
+.carousel-right {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    text-align: right;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 40%;
+    color: #ffffff;
+}
+
+
+.mi-boton-personalizado {
+    background-color: #000;
+    color: #87CEEB;
+    /* Letras celestes */
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.mi-boton-personalizado:hover {
+    background-color: #87CEEB;
+    /* Fondo celeste al pasar el cursor */
+    color: black;
+    /* Letras blancas al pasar el cursor */
+}
+
+.texto-carrusel {
+    font-weight: bold;
+
+    color: white;
+
+}
+
+
+
+
+/* Planes */
+#exposiciones {
+    background-color: #000;
+    padding: 100px 0;
+}
+
+.titulo-seccion {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+}
+
+#exposiciones .fila {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* IMPORTANTE */
+}
+
+#exposiciones .fila .col {
+    max-width: 280px;
+    border: 2px solid #fff;
+    padding: 40px 30px;
+    text-align: center;
+    transition: .4s;
+    margin: 10px;
+}
+
+
+#exposiciones #landing-page {
+
+    border: 3px solid red;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.etiqueta-top {
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 0;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+
+}
+
+
+#exposiciones .fila .col:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, .8);
+}
+
+
+#exposiciones .fila .col .info {
+    margin-bottom: 20px;
+    color: #444;
+    font-size: 20px;
+}
+
+#exposiciones .fila .col span {
+    display: block;
+    color: #d4d4d4;
+}
+
+#exposiciones .fila .col p {
+    font-size: 12px;
+}
+
+#exposiciones .fila .col button {
+    font-size: 12px;
+    border: none;
+    font-size: 20px;
+    width: 100%;
+    padding: 5px 20px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    transition: .3s;
+}
+
+#exposiciones .fila .col button:hover {
+    background-color: #000;
+    color: #87CEEB;
+    /* Letras celestes */
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.color-precio {
+    color: rgb(86, 112, 184);
+
+}
+
+.texto-incluye {
+
+    font-family: 'Roboto', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 200;
+
+}
+
+
+/*estilo del modal planes*/
+
+.modal-body {
+    background-image: url(../img/2885170.jpg);
+    background-size: cover;
+    background-position: center;
+    color: lightblue;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.modal-header {
+
+    background-color: black;
+
+}
+
+.modal-title {
+    color: rgb(174, 24, 243);
+}
+
+.modal-footer {
+    background-color: black;
+}
+
+.modal-dialog {
+    border: 2px solid lightblue;
+
+}
+
+.aclaracion {
+    font-size: 13px;
+}
+
+
+
 /*servicios*/
 
 
@@ -294,18 +604,23 @@ footer {
 
 #servicios .fila {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 90%;
+    gap: 20px;
+    max-width: 1200px;
     margin: 30px auto;
+
+
+
 }
 
 #servicios .fila .servicio {
-    max-width: 350px;
+    flex: 1 1 calc(33.333% - 20px); /* tres columnas con espacio entre ellas */
     background-color: #fff;
     padding: 2rem;
-    margin: 0 5px;
     border-radius: 5px;
     transition: .5s;
+    box-sizing: border-box;
 }
 
 #servicios .fila .servicio:hover {
@@ -368,161 +683,6 @@ footer {
 
 
 
-/* Planes */
-#exposiciones {
-    background-color: #000;
-    padding: 100px 0;
-}
-
-.titulo-seccion {
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-thickness: 5px;
-}
-
-#exposiciones .fila {
-    display: flex;
-    justify-content: center;
-}
-
-#exposiciones .fila .col {
-    max-width: 280px;
-    border: 2px solid #fff;
-    padding: 40px 30px;
-    text-align: center;
-    transition: .4s;
-    margin: 10px;
-}
-
-
-#exposiciones #landing-page {
-
-    border: 3px solid red;
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-
-}
-
-.etiqueta-top {
-    background-color: red;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    padding: 5px 0;
-    font-size: 0.9rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-
-}
-
-
-
-
-#exposiciones .fila .col:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(255, 255, 255, .8);
-}
-
-
-
-
-
-#exposiciones .fila .col .info {
-    margin-bottom: 20px;
-    color: #444;
-    font-size: 20px;
-}
-
-#exposiciones .fila .col span {
-    display: block;
-    color: #d4d4d4;
-}
-
-#exposiciones .fila .col p {
-    font-size: 12px;
-}
-
-#exposiciones .fila .col button {
-    font-size: 12px;
-    border: none;
-    font-size: 20px;
-    width: 100%;
-    padding: 5px 20px;
-    border: 2px solid #fff;
-    background-color: transparent;
-    color: #fff;
-    transition: .3s;
-}
-
-#exposiciones .fila .col button:hover {
-    background-color: #000;
-    color: #87CEEB;
-    /* Letras celestes */
-    padding: 10px 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-}
-
-.color-precio {
-    color: rgb(86, 112, 184);
-
-}
-
-.texto-incluye  {
-
-    font-family: 'Roboto', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 200;
-      
-  }
-      
-
-
-
-
-
-/*estilo del modal */
-
-.modal-body {
-    background-image: url(../img/2885170.jpg);
-    background-size: cover;
-    background-position: center;
-    color: lightblue;
-    font-family: 'Roboto', sans-serif;
-
-}
-
-.modal-header {
-
-    background-color: black;
-
-}
-
-.modal-title {
-    color: rgb(174, 24, 243);
-}
-
-.modal-footer {
-    background-color: black;
-}
-
-.modal-dialog {
-    border: 2px solid lightblue;
-
-}
-
-.aclaracion {
-    font-size: 13px;
-}
 
 /*proyectos*/
 
@@ -545,14 +705,18 @@ footer {
 
 #portfolio .fila {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
     margin: 30px 0;
 }
 
 #portfolio .fila .proyecto {
-    max-width: 450px;
+    min-width: 280px;
+    width: 30%;
     border: 1px solid #000;
     margin: 0 10px;
+    margin-bottom: 20px;
     position: relative;
     overflow: hidden;
 }
@@ -560,7 +724,6 @@ footer {
 #portfolio .fila .proyecto img {
     width: 100%;
     height: 100%;
-    ;
     filter: grayscale(0);
     object-fit: cover;
     transition: .5s;
@@ -589,8 +752,8 @@ footer {
 
 #portfolio .fila .proyecto video {
     width: 100%;
-    height: 100%;
-
+    height: auto;
+    display: block;
     object-fit: cover;
     transition: .5s;
 }
@@ -618,6 +781,7 @@ footer {
     cursor: pointer;
     margin: 10px;
 }
+
 
 
 /*seccion nosotros*/
@@ -717,26 +881,76 @@ footer {
 
 
 
-/*footer*/
-
-.derechos-de-autor {
-    font-size: 15px;
-}
-
-.iconos-redes i:hover {
-    transform: scale(1.2, 1.2);
-    /* 150% horizontal, 80% vertical */
-}
-
-
-
-
 /*Sección responsiva */
 
 
-@media (max-width: 1024px) {
+/*estilo para pc escritorio*/
 
-    /* Ajustes para tablets */
+@media (min-width: 1025px) {
+    #exposiciones .fila .col {
+        width: calc(33.33% - 40px); /* Tres columnas por fila */
+    }
+
+
+    /* Ajustes generales para escritorio */
+body, html {
+    font-size: 14px; /* Más pequeño que 1.5rem para textos normales */
+}
+
+/* Parrafos más chicos */
+p {
+    font-size: 1rem;
+}
+
+/* Encabezado */
+.logo h1 {
+    font-size: 1.5rem;
+}
+
+/* Botón menú */
+.bton {
+    font-size: 0.9rem;
+}
+
+/* Reducción íconos de redes sociales */
+.social i {
+    font-size: 1.1rem;
+}
+
+/* Carousel */
+.carousel-caption h2 {
+    font-size: 1.5rem;
+}
+.carousel-caption p {
+    font-size: 1rem;
+}
+
+#servicios .fila,
+#portfolio .fila {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+
+#portfolio .item, #servicios .item {
+    background-color: #111;
+    padding: 1rem;
+    border: 1px solid #333;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+}
+
+
+
+}
+
+
+
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+
     header {
         flex-direction: column;
         align-items: center;
@@ -750,7 +964,7 @@ footer {
 
     nav ul li {
         display: block;
-        margin: 10px 0;
+        margin: 10px;
     }
 
     .carousel-caption {
@@ -764,42 +978,40 @@ footer {
     }
 
     #servicios .fila .servicio {
-        max-width: 45%;
+        flex: 1 1 calc(50% - 20px);
         margin: 10px;
     }
 
-    #exposiciones .fila {
+    #portfolio .fila {
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    #exposiciones .fila .col {
-        max-width: 45%;
+    #portfolio .fila .proyecto {
+        flex: 1 1 calc(50% - 20px);
         margin: 10px;
     }
 
     .proyecto .info .titulo-descripcion {
         font-size: 14px;
-        /* Reducir tamaño de título */
     }
 
     .proyecto .info p {
         font-size: 12px;
-        /* Reducir tamaño del párrafo */
     }
 
     .proyecto .info i {
         font-size: 12px;
-        /* Ajustar tamaño del icono */
     }
+
 }
 
 
 
+/* Ajustes para celulares normales */
 
 @media (max-width: 768px) {
 
-    /* Ajustes para celulares */
     .wrapper {
         padding: 0 10px;
     }
@@ -822,8 +1034,6 @@ footer {
     }
 
 
-
-
     main {
         padding: 1rem;
     }
@@ -832,7 +1042,8 @@ footer {
         font-size: 1.2rem;
     }
 
-    .carousel-caption p {
+
+    .texto-carrusel {
         font-size: 1rem;
     }
 
@@ -841,7 +1052,9 @@ footer {
     }
 
     #exposiciones .fila .col {
-        max-width: 100%;
+        width: calc(50% - 40px);
+        /* 2 columnas, considerando márgenes */
+
     }
 
 
@@ -929,172 +1142,160 @@ footer {
     }
 
 
-    .galeria-blog .gallery-cell h3 {
-        margin-bottom: 7px;
-        text-align: center;
-    }
-
-
-
-    .galeria-blog .gallery-cell p {
-        color: lightblue;
-        font-style: italic;
-        font-size: 20px;
-        font-family: 'Roboto', sans-serif;
-        text-align: center;
-    }
-
-
-
-    #blog .animated-title {
-        font-size: 3rem;
-        font-weight: bold;
-        color: purple;
-        text-align: center;
-        position: relative;
-        font-family: 'Roboto', sans-serif;
-        letter-spacing: 8px;
-        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.4);
-        animation: glow 3s infinite alternate;
-    }
 
 }
 
+ /* celulares pequeños */
+@media (max-width: 480px) {
 
-
-/* Ajuste para pantallas muy pequeñas (teléfonos pequeños) */
-@media screen and (max-width: 480px) {
-    .proyecto .info .titulo-descripcion {
-        font-size: 12px;
+    body,
+    html {
+        font-size: 14px;
     }
 
-    .proyecto .info p {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 0.5rem;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+        /* Mostrar el botón hamburguesa */
+    }
+
+    nav ul {
+        display: none;
+        /* Ocultar menú principal */
+        flex-direction: column;
+        width: 100%;
+        background-color: #111;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        border-top: 1px solid #444;
+        width: 100%;
+    }
+
+    .show-menu {
+        display: flex !important;
+        /* Clave para mostrar menú cuando se hace toggle */
+    }
+
+    .carousel-caption {
+        padding: 10px;
+        max-width: 50%;
+        width: 95%;
+        height: 70%;
+        /* Asegura que el fondo cubra el ancho del contenido */
+        font-size: 14px;
+        word-wrap: break-word;
+        /* Evita que el texto se desborde */
+        background: rgba(0, 0, 0, 0.2);
+        /* Más opacidad para mejorar el contraste */
+    }
+
+
+    .carousel-caption p {
+        font-size: 0.65rem;
+        /* Ajusta los tamaños de texto si es necesario */
+        margin: 5px 0;
+        text-align: center;
+    }
+
+
+    .carousel-caption h2 {
+        font-size: 0.75rem;
+    }
+
+
+    .carousel-caption .btn {
+        padding: 7px 8px;
         font-size: 10px;
     }
 
-    .proyecto .info i {
-        font-size: 25px;
+
+    .carousel-right {
+        max-width: 90%;
+        right: 5%;
+        padding: 10px;
     }
-}
 
-/* últimos cambios al 21/4 */
-
-.social a {
-    display: inline-block;
-    background: linear-gradient(to right, rgba(238, 229, 229, 0.616), black, black, rgba(238, 229, 229, 0.616));
-    /* Gradiente de negro a gris */
-    text-decoration: none;
-    padding: 5px 15px;
-    border-radius: 20px;
-    transition: transform 0.3s ease, background 0.3s ease;
-    border: 2px solid grey;
-    /* Borde gris */
-    margin: 4px;
-
-}
-
-.social a:hover {
-    transform: scale(1.1);
-    /* Aumenta el tamaño 10% en ambos ejes */
-}
-
-
-
-.social i {
-    font-size: 1.375rem;
-    font-weight: bold;
-
-}
-
-.carousel-right {
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translateY(-50%);
-    text-align: right;
-    background: rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 40%;
-    color: #ffffff;
-}
-
-form {
-    max-width: 400px;
-    margin: auto;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-}
-
-button {
-    padding: 0.5rem 1rem;
-    background: #3498db;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-
-.mi-boton-personalizado {
-    background-color: #000;
-    color: #87CEEB;
-    /* Letras celestes */
-    padding: 10px 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-}
-
-.mi-boton-personalizado:hover {
-    background-color: #87CEEB;
-    /* Fondo celeste al pasar el cursor */
-    color: black;
-    /* Letras blancas al pasar el cursor */
-}
-
-.texto-carrusel {
-    font-weight: bold;
-
-    color: white;
-
-}
-.marquee-container {
-    width: 100%;
-    overflow: hidden;
-    background-color: #111;
-    padding: 10px 0;
-    border-top: 1px solid #444;
-    border-bottom: 1px solid #444;
-}
-
-.marquee {
-    display: inline-block;
-    white-space: nowrap;
-    animation: marquee 15s linear infinite;
-}
-
-.marquee span {
-    font-size: 1.1rem;
-    color: whitesmoke;
-    padding-left: 100%;
-    display: inline-block;
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(0%);
+    #exposiciones .fila {
+        flex-direction: column;
+        align-items: center;
     }
-    100% {
-        transform: translateX(-100%);
+
+    #exposiciones .fila .col {
+        width: 90%;
+        padding: 20px;
     }
+
+    form {
+        width: 90%;
+        padding: 1rem 0.5rem;
+    }
+
+    .social a {
+        padding: 4px 10px;
+    }
+
+    .iconos-redes i {
+        font-size: 1.1rem;
+    }
+
+    .bton {
+        font-size: 0.9rem;
+        padding: 0.4em 1em;
+    }
+
+    #servicios .fila {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #servicios .servicio {
+        max-width: 90%;
+        width: 100%;
+    }
+
+    #portfolio .fila {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      #portfolio .proyecto {
+        width: 100% !important;
+        min-width: 100% !important;
+        margin: 0 auto 20px auto !important;
+        display: block !important;
+      }
+    
+      #portfolio .proyecto .info {
+        position: static !important;
+        opacity: 1 !important;
+        background-color: rgba(0, 0, 0, 0.7);
+        margin-top: -5px;
+      }
+
+
+
 }
