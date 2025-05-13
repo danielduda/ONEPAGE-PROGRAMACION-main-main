@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function toggleMenu() {
     var navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("show"); // Agrega o quita la clase 'show'
+    navLinks.classList.toggle("show-menu"); // Agrega o quita la clase 'show'
 }
 
 

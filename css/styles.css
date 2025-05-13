@@ -56,9 +56,6 @@ button {
 }
 
 
-
-
-
 /*footer*/
 
 
@@ -615,7 +612,8 @@ nav ul li a:hover {
 }
 
 #servicios .fila .servicio {
-    flex: 1 1 calc(33.333% - 20px); /* tres columnas con espacio entre ellas */
+    flex: 1 1 calc(33.333% - 20px);
+    /* tres columnas con espacio entre ellas */
     background-color: #fff;
     padding: 2rem;
     border-radius: 5px;
@@ -888,59 +886,64 @@ nav ul li a:hover {
 
 @media (min-width: 1025px) {
     #exposiciones .fila .col {
-        width: calc(33.33% - 40px); /* Tres columnas por fila */
+        width: calc(33.33% - 40px);
+        /* Tres columnas por fila */
     }
 
 
     /* Ajustes generales para escritorio */
-body, html {
-    font-size: 14px; /* Más pequeño que 1.5rem para textos normales */
-}
+    body,
+    html {
+        font-size: 14px;
+        /* Más pequeño que 1.5rem para textos normales */
+    }
 
-/* Parrafos más chicos */
-p {
-    font-size: 1rem;
-}
+    /* Parrafos más chicos */
+    p {
+        font-size: 1rem;
+    }
 
-/* Encabezado */
-.logo h1 {
-    font-size: 1.5rem;
-}
+    /* Encabezado */
+    .logo h1 {
+        font-size: 1.5rem;
+    }
 
-/* Botón menú */
-.bton {
-    font-size: 0.9rem;
-}
+    /* Botón menú */
+    .bton {
+        font-size: 0.9rem;
+    }
 
-/* Reducción íconos de redes sociales */
-.social i {
-    font-size: 1.1rem;
-}
+    /* Reducción íconos de redes sociales */
+    .social i {
+        font-size: 1.1rem;
+    }
 
-/* Carousel */
-.carousel-caption h2 {
-    font-size: 1.5rem;
-}
-.carousel-caption p {
-    font-size: 1rem;
-}
+    /* Carousel */
+    .carousel-caption h2 {
+        font-size: 1.5rem;
+    }
 
-#servicios .fila,
-#portfolio .fila {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    #servicios .fila,
+    #portfolio .fila {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
 
 
-#portfolio .item, #servicios .item {
-    background-color: #111;
-    padding: 1rem;
-    border: 1px solid #333;
-    color: white;
-    text-align: center;
-    border-radius: 8px;
-}
+    #portfolio .item,
+    #servicios .item {
+        background-color: #111;
+        padding: 1rem;
+        border: 1px solid #333;
+        color: white;
+        text-align: center;
+        border-radius: 8px;
+    }
 
 
 
@@ -1010,7 +1013,12 @@ p {
 
 /* Ajustes para celulares normales */
 
-@media (min-width: 480px) and (max-width: 767px) {
+/* Dispositivos móviles y tablets pequeños: hasta 767px */
+@media (max-width: 767px) {
+
+    main {
+        padding: 1rem;
+    }
 
     .wrapper {
         padding: 0 10px;
@@ -1021,87 +1029,18 @@ p {
     }
 
     .logo h1 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        /* Ligero ajuste para mejor visibilidad sin ocupar tanto */
     }
 
-    nav ul {
-        padding: 0;
-    }
-
-    nav ul li {
-        display: block;
-        text-align: center;
-    }
-
-
-    main {
-        padding: 1rem;
-    }
-
-    .carousel-caption h2 {
-        font-size: 1.2rem;
-    }
-
-
-    .texto-carrusel {
-        font-size: 1rem;
-    }
-
-    #servicios .fila .servicio {
-        max-width: 100%;
-    }
-
-    #exposiciones .fila .col {
-        width: calc(50% - 40px);
-        /* 2 columnas, considerando márgenes */
-
-    }
-
-
-    #portfolio .fila {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        /* Dos columnas siempre */
-        gap: 10px;
-        /* Espaciado entre elementos */
-        justify-content: center;
-    }
-
-    #portfolio .fila .proyecto {
+    nav {
         width: 100%;
-    }
-
-    /* Para evitar que haya elementos sueltos en una fila */
-    #portfolio .fila .proyecto:nth-child(odd):last-child {
-        grid-column: span 2;
-        /* Si hay un solo elemento en la última fila, ocupará toda la fila */
-        justify-self: center;
-    }
-
-    .proyecto .info .titulo-descripcion {
-        font-size: 10px;
-        /* Reducir tamaño de título */
-    }
-
-    .proyecto .info p {
-        font-size: 10px;
-        /* Reducir tamaño del párrafo */
-    }
-
-    .proyecto .info i {
-        font-size: 20px;
-        /* Ajustar tamaño del icono */
-    }
-
-    .menu-toggle {
-        display: block;
-        /* Se muestra en móviles */
-
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     nav ul {
         display: none;
-        /* Ocultar menú por defecto */
         position: absolute;
         top: 60px;
         right: 0;
@@ -1112,40 +1051,161 @@ p {
         z-index: 99;
     }
 
-    nav ul.show {
+    nav ul li a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        font-size: 1rem;
+        /* Mejor legibilidad del menú */
+        padding: 10px;
+        
+        
+
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .show-menu {
+        display: flex !important;
+    }
+
+    .bton {
+        display: inline-block !important;
+        width: auto !important;
+        padding: 0.4em 1em;
+        font-size: 0.95rem;
+        /* Leve aumento para mejor accesibilidad táctil */
+        border-radius: 6px;
+        margin: 0.3em auto;
+        text-align: center;
+    }
+
+    .social {
         display: flex;
-        /* Mostrar menú al hacer clic */
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .social a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #111;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        text-decoration: none;
+    }
+
+    .iconos-redes i {
+        font-size: 1.3rem;
+        /* Íconos ligeramente más grandes */
+        color: white;
+    }
+
+    
+
+    .carousel-caption {
+        padding: 10px;
+        max-width: 50%;
+        width: 95%;
+        height: 70%;
+        /* Asegura que el fondo cubra el ancho del contenido */
+        font-size: 14px;
+        word-wrap: break-word;
+        /* Evita que el texto se desborde */
+        background: rgba(0, 0, 0, 0.2);
+        /* Más opacidad para mejorar el contraste */
+    }
+
+
+    .carousel-caption p {
+        font-size: 0.65rem;
+        /* Ajusta los tamaños de texto si es necesario */
+        margin: 5px 0;
+        text-align: center;
+    }
+
+
+    .carousel-caption h2 {
+        font-size: 0.75rem;
+    }
+
+
+    .carousel-caption .btn {
+        padding: 7px 8px;
+        font-size: 10px;
+    }
+
+
+    .carousel-right {
+        max-width: 90%;
+        right: 5%;
+        padding: 10px;
+    }
+
+
+
+
+    #servicios .fila .servicio {
+        max-width: 100%;
+    }
+
+    #exposiciones .fila .col {
+        width: calc(50% - 40px);
+    }
+
+    #portfolio .fila {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        justify-content: center;
+    }
+
+    #portfolio .fila .proyecto {
+        width: 100%;
+    }
+
+    #portfolio .fila .proyecto:nth-child(odd):last-child {
+        grid-column: span 2;
+        justify-self: center;
+    }
+
+    .proyecto .info .titulo-descripcion,
+    .proyecto .info p {
+        font-size: 0.75rem;
+        /* Ajustado para mantener legibilidad en pantallas chicas */
+    }
+
+    .proyecto .info i {
+        font-size: 1.2rem;
     }
 
     .derechos-de-autor {
-        font-size: 10px;
+        font-size: 0.75rem;
     }
 
     .texto-nosotros {
         font-family: 'Roboto', sans-serif;
-        font-size: 20px;
+        font-size: 1.1rem;
+        /* Aproximadamente 17.6px para legibilidad */
         color: lightblue;
         text-align: center;
     }
 
-    .imagen-nosotros2 {
-        background-size: cover;
-        background-position: bottom left;
-
-    }
-
+    .imagen-nosotros2,
     .contenedor-blog {
-
         background-size: cover;
         background-position: bottom left;
-
     }
-
-
-
 }
 
- /* celulares pequeños */
+
+/* celulares pequeños */
 @media (max-width: 479px) {
 
     body,
@@ -1176,10 +1236,14 @@ p {
 
     nav ul {
         display: none;
-        /* Ocultar menú principal */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #222;
         flex-direction: column;
-        width: 100%;
-        background-color: #111;
+        width: 200px;
+        padding: 10px;
+        z-index: 99;
     }
 
     nav ul li {
@@ -1190,7 +1254,7 @@ p {
     nav ul li a {
         display: block;
         padding: 10px;
-        border-top: 1px solid #444;
+        border: none;
         width: 100%;
     }
 
@@ -1253,17 +1317,43 @@ p {
         padding: 1rem 0.5rem;
     }
 
+
+    .social {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
     .social a {
-        padding: 4px 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #111;
+        /* o el color que estés usando */
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        text-decoration: none;
     }
 
     .iconos-redes i {
         font-size: 1.1rem;
+        color: white;
     }
 
+
+
+
     .bton {
-        font-size: 0.9rem;
+        display: inline-block !important;
+        width: auto !important;
         padding: 0.4em 1em;
+        font-size: 0.9rem;
+        border-radius: 6px;
+        margin: 0.3em auto;
+        text-align: center;
     }
 
     #servicios .fila {
@@ -1280,21 +1370,21 @@ p {
         display: flex;
         flex-direction: column;
         align-items: center;
-      }
-    
-      #portfolio .proyecto {
+    }
+
+    #portfolio .proyecto {
         width: 100% !important;
         min-width: 100% !important;
         margin: 0 auto 20px auto !important;
         display: block !important;
-      }
-    
-      #portfolio .proyecto .info {
+    }
+
+    #portfolio .proyecto .info {
         position: static !important;
         opacity: 1 !important;
         background-color: rgba(0, 0, 0, 0.7);
         margin-top: -5px;
-      }
+    }
 
 
 
