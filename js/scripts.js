@@ -14,9 +14,13 @@ function toggleMenu() {
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
 
+    const form = this; // Guardamos referencia al formulario
+
+
     emailjs.sendForm('service_yphksjj', 'template_0lhiiy8', this)
       .then(function() {
         alert('Mensaje enviado con éxito 🎉');
+        form.reset(); // ✅ Aquí sí resetea correctamente el formulario
       }, function(error) {
         console.error('Error:', error);
         alert('Hubo un problema 😢');
